@@ -12,12 +12,12 @@
 
 
 <script>
-import navigation from './components/navigation.vue';
-import pageAccueil from './pageAccueil.vue';
-import piedpage from './components/piedpage.vue';
+import navigation from "./components/navigation.vue";
+import pageAccueil from "./pageAccueil.vue";
+import piedpage from "./components/piedpage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     navigation,
     pageAccueil,
@@ -27,34 +27,36 @@ export default {
 </script>
 
 
-<style> * {
-   margin: 0;
-   padding: 0;
-   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
- }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: "Cormorant Garamond", serif;
+}
 
- /* .global{
+/* .global{
   box-sizing: border-box;
 } */
- body {
-   /* background-color: rgb(164, 164, 164); */
-   margin: 0;
-   padding: 0;
- }
+body {
+  /* background-color: rgb(164, 164, 164); */
+  margin: 0;
+  padding: 0;
+}
 
- .nav {
-   /* position: sticky;
+.nav {
+  /* position: sticky;
    top: 0; */
-   margin-bottom: 1rem;
- }
+  margin-bottom: 1rem;
+}
 
- .cadre {
-   border: 1rem solid #CD2428;
-   /* width: 100vw; */
-   height: 100%;
-   box-sizing: border-box;
-   background-color: #CD2428;
- }
+.cadre {
+  border: 1rem solid #cd2428;
+  /* width: 100vw; */
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #cd2428;
+}
 </style>
 
 
