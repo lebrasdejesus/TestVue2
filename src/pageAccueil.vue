@@ -246,11 +246,11 @@ p {
 }
 
 .fourthpart {
-  height: 50vh;
-  background-color: #cd2428;
+  height: 40rem;
+  background-color: #bc8889;
   color: #faf5d0;
   padding: 3rem;
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
 }
@@ -261,23 +261,33 @@ p {
 .conteneur-accordeon {
   display: flex;
   flex-direction: row;
-  /* position: relative; */
-  width: 90%;
+  position: relative;
+  width: 100%;
+  max-height: 85%;
+  /* height: 33rem; */
   /* justify-content: top;
   align-items: start; */
   border: solid 1px #24cd35;
+  /* overflow: hidden; */
 }
 .sous-conteneur-accordeon {
-  /* position: relative; */
-  width: 40%;
-  display: flex;
+  position: relative;
+  width: 33.33%;
+  max-height: 100%;
+  /* display: flex; */
+  /* flex-direction: row; */
   justify-content: top;
-  align-items: start;
-  border: solid 1px #ba41ea;
+  align-items: center;
+  border: solid 2px #ba41ea;
+  /* overflow: hidden; */
 }
 .img-accordeon {
   /* position: absolute; */
-  max-width: 100%;
-  height: fit-content;
+  /* max-width: 100%;
+  max-height: 100%;
+  overflow: hidden; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>
