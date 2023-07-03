@@ -64,12 +64,13 @@ export default {
     </div>
 
     <div class="fourthpart">
-      <div class="partietexte">
+      <div>
         <h2>Nos restaurants</h2>
         <br />
         <p>Lille - Rouen - Halles Agrivin (Rouen)</p>
         <br />
       </div>
+
       <div class="conteneur-accordeon">
         <div class="sous-conteneur-accordeon">
           <img
@@ -77,20 +78,34 @@ export default {
             src="./assets/homepage/Entree-Lakson-Rouen.jpg"
             alt="Rouen"
           />
+          <div class="survol">
+            <div class="texte-accordeon">le restaurant de Rouen</div>
+            <div class="bouton-accordeon">DÉCOUVRIR</div>
+          </div>
         </div>
+
         <div class="sous-conteneur-accordeon">
           <img
             class="img-accordeon"
             src="./assets/homepage/Lakson-de-Lille.jpg"
             alt="Lille"
           />
+          <div class="survol">
+            <div class="texte-accordeon">le restaurant de Lille</div>
+            <div class="bouton-accordeon">DÉCOUVRIR</div>
+          </div>
         </div>
+
         <div class="sous-conteneur-accordeon">
           <img
             class="img-accordeon"
             src="./assets/homepage/Photos-fictives-des-restaurants-1.jpg"
             alt="Rouen bis"
           />
+          <div class="survol">
+            <div class="texte-accordeon">Halles Agrivin (Rouen)</div>
+            <div class="bouton-accordeon">DÉCOUVRIR</div>
+          </div>
         </div>
       </div>
     </div>
@@ -247,10 +262,10 @@ p {
 
 .fourthpart {
   height: 40rem;
-  background-color: #bc8889;
+  background-color: #cd2428;
   color: #faf5d0;
   padding: 3rem;
-  /* position: relative; */
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -263,31 +278,95 @@ p {
   flex-direction: row;
   position: relative;
   width: 100%;
-  max-height: 85%;
+  height: 85%;
   /* height: 33rem; */
   /* justify-content: top;
   align-items: start; */
-  border: solid 1px #24cd35;
-  /* overflow: hidden; */
+  /* border: solid 1px #24cd35; */
 }
 .sous-conteneur-accordeon {
   position: relative;
   width: 33.33%;
   max-height: 100%;
-  /* display: flex; */
-  /* flex-direction: row; */
   justify-content: top;
   align-items: center;
-  border: solid 2px #ba41ea;
-  /* overflow: hidden; */
+  /* border: solid 2px #ba41ea; */
+}
+.sous-conteneur-accordeon:hover {
+  width: 70%;
+  transition: 0.7s ease;
 }
 .img-accordeon {
-  /* position: absolute; */
-  /* max-width: 100%;
-  max-height: 100%;
-  overflow: hidden; */
+  /* overflow: hidden; */
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.img-accordeon:hover {
+  max-height: 100%;
+}
+.survol {
+  /* border: #cd2470 1px solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bouton-accordeon {
+  margin-top: 2rem;
+  padding: 1rem;
+  width: fit-content;
+  border: 1px #faf5d0 solid;
+  color: #faf5d0;
+  font-size: 1.3rem;
+  font-style: italic;
+  transition: all 0.3s;
+}
+
+.bouton-accordeon:hover {
+  background-color: #cd2428;
+  color: #faf5d0;
+  cursor: pointer;
+  border: 1px #faf5d0 solid;
+}
+
+.sous-conteneur-accordeon .survol {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.sous-conteneur-accordeon:hover .survol {
+  opacity: 1;
+}
+
+/* .sous-conteneur-accordeon .normal {
+  transition: 0.5s ease;
+}
+
+.sous-conteneur-accordeon:hover .normal {
+  opacity: 0;
+} */
+
+.sous-conteneur-accordeon .survol {
+  /* background: linear-gradient(rgba(65, 65, 65, 0), #000000); */
+  background: linear-gradient(
+    to top,
+    #000000,
+    rgba(0, 0, 0, 1) 10%,
+
+    rgba(0, 0, 0, 0) 90%,
+    rgba(0, 0, 0, 0) 90%
+  );
+}
+.texte-accordeon {
+  color: #faf5d0;
+  font-size: 1.5rem;
+  text-shadow: 0px 3px 7px rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
