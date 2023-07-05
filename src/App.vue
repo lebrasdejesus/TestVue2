@@ -2,7 +2,7 @@
   <div class="global">
     <div class="cadre">
       <div class="nav">
-        <navigation />
+        <navigation2 />
       </div>
       <pageAccueil />
       <piedpage />
@@ -12,14 +12,14 @@
 
 
 <script>
-import navigation from "./components/navigation2.vue";
+import navigation2 from "./components/navigation2.vue";
 import pageAccueil from "./pageAccueil.vue";
 import piedpage from "./components/piedpage.vue";
 
 export default {
   name: "App",
   components: {
-    navigation,
+    navigation2,
     pageAccueil,
     piedpage,
   },
