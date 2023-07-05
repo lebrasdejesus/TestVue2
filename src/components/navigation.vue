@@ -18,7 +18,18 @@ export default {
     <div></div>
     <div></div>
     <div class="menu"><a href="#/">Accueil</a></div>
-    <div class="menu"><a href="#/contenu2">Nos restaurants</a></div>
+    <div class="menu">
+      <a href="#/contenu2"
+        >Nos restaurants &nbsp;<i class="fleche"></i>&nbsp;</a
+      >
+      <div class="liste">
+        <ul>
+          <li>Lakson - Lille</li>
+          <li>Lakson - Rouen</li>
+          <li>Lakson - Rouen - Halles Agrivin</li>
+        </ul>
+      </div>
+    </div>
     <div class="menu"><a href="#/contenu3">Nos produits</a></div>
     <div class="menu bout"><a href="#/contenu4">Réservations</a></div>
   </div>
@@ -71,5 +82,16 @@ a {
   height: 1px;
   width: 100%;
   bottom: 0.5rem;
+}
+.fleche::after {
+  content: "▾";
+  position: absolute;
+  font-style: normal;
+}
+.liste {
+  display: none;
+}
+.liste:hover {
+  display: block;
 }
 </style>

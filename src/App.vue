@@ -12,7 +12,7 @@
 
 
 <script>
-import navigation from "./components/navigation.vue";
+import navigation from "./components/navigation2.vue";
 import pageAccueil from "./pageAccueil.vue";
 import piedpage from "./components/piedpage.vue";
 
