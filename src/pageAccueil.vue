@@ -59,7 +59,7 @@ export default {
         </p>
         <br /><br />
         <p class="bold">Bon voyage en terre inconnue !</p>
-        <div class="boutonblanc coutourrouge">RÉSERVER UNE TABLE</div>
+        <div class="boutonblanc contourrouge">RÉSERVER UNE TABLE</div>
       </div>
     </div>
 
@@ -164,7 +164,7 @@ export default {
   transition: all 0.3s;
   width: fit-content;
 }
-.coutourrouge {
+.contourrouge {
   border: 1px solid #cd2428;
 }
 .boutonrouge:hover {
@@ -176,7 +176,7 @@ export default {
 }
 
 .secondpart {
-  height: 16vh;
+  /* height: 16vh; */
   background-color: #cd2428;
   color: #faf5d0;
   padding: 3rem;
@@ -207,6 +207,9 @@ h2 {
 p {
   color: #faf5d0;
   font-size: 1.3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-style: italic;
 }
 
 .divpetitesimages {
@@ -215,7 +218,7 @@ p {
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
 }
 .sousdivpetitesimages {
   position: relative;
@@ -253,8 +256,10 @@ p {
 
 .textenoir {
   color: black;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-style: normal;
 }
 .bold {
   font-weight: bold;

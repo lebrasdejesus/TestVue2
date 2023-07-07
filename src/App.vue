@@ -4,7 +4,9 @@
       <div class="nav">
         <navigation2 />
       </div>
-      <pageAccueil />
+      <component :is="currentView" />
+      <!-- <pageAccueil />
+      <restoLille /> -->
       <piedpage />
     </div>
   </div>
@@ -14,14 +16,49 @@
 <script>
 import navigation2 from "./components/navigation2.vue";
 import pageAccueil from "./pageAccueil.vue";
+import restoLille from "./restoLille.vue";
+// import pdfCarteRestoLille from "./pdfCarteRestoLille.vue";
+import restoRouen from "./restoRouen.vue";
+import restoRouenHalles from "./restoRouenHalles.vue";
+import nosProduits from "./nosProduits.vue";
 import piedpage from "./components/piedpage.vue";
+
+const routes = {
+  "/": pageAccueil,
+  "/RestaurantLille": restoLille,
+  // "/pdfCarteRestoLille": pdfCarteRestoLille,
+  "/RestaurantRouen": restoRouen,
+  "/RestaurantRouenHalles": restoRouenHalles,
+  "/nos-produits": nosProduits,
+};
 
 export default {
   name: "App",
   components: {
     navigation2,
     pageAccueil,
+    restoLille,
+    // pdfCarteRestoLille,
+    restoRouen,
+    restoRouenHalles,
+    nosProduits,
     piedpage,
+  },
+
+  data() {
+    return {
+      currentPath: window.location.hash,
+    };
+  },
+  computed: {
+    currentView() {
+      return routes[this.currentPath.slice(1) || "/"] || pageAccueil;
+    },
+  },
+  mounted() {
+    window.addEventListener("hashchange", () => {
+      this.currentPath = window.location.hash;
+    });
   },
 };
 </script>

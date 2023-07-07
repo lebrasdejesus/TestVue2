@@ -21,21 +21,25 @@ export default {
           <a class="lvl-0-mot" href="#/">Accueil</a>
         </li>
         <li class="lvl-0">
-          <a href="#/">Restaurants &nbsp; <span class="felche"></span></a>
+          <a href="#/">Restaurants &nbsp; <span class="fleche"></span></a>
           <ul class="mega-menu-tab">
             <li class="lvl-1">
               <ul class="lvl-2">
-                <li><a href="#">Lakson - Lille</a></li>
-                <li><a href="#">Lakson - Rouen</a></li>
-                <li><a href="#">Lakson - Rouen - Halles Agrivin</a></li>
+                <li><a href="#/RestaurantLille">Lakson - Lille</a></li>
+                <li><a href="#/RestaurantRouen">Lakson - Rouen</a></li>
+                <li>
+                  <a href="#/RestaurantRouenHalles"
+                    >Lakson - Rouen - Halles Agrivin</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
         </li>
         <li class="lvl-0">
-          <a href="#/">Nos produits</a>
+          <a href="#/nos-produits">Nos produits</a>
         </li>
-        <li class="lvl-0">
+        <li class="lvl-0 bout">
           <a href="#/">Réservations</a>
         </li>
       </ul>
@@ -74,21 +78,13 @@ li {
   list-style: none;
 }
 
-/* .mega-menu a {
-  display: block;
-  color: white;
-  text-decoration: none;
-}
-.mega-menu a:hover {
-  background: rgba(80, 137, 240, 0.5);
-} */
-
 .mega-menu-main {
   display: flex;
-  justify-content: center;
+  /* justify-items: end; */
+  justify-content: end;
   align-items: center;
   position: relative;
-  background: rgba(33, 105, 236, 0.2);
+  /* background: rgba(33, 105, 236, 0.2); */
   height: 3.5rem;
 }
 
@@ -100,6 +96,9 @@ li {
 } */
 .lvl-0 {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .lvl-0:hover > .mega-menu-tab {
   /*2*/
@@ -108,35 +107,32 @@ li {
 .mega-menu-tab {
   display: none;
   position: absolute;
-  top: 2.4rem;
-  /* top: 1rem; */
-  /* left: 0; */
-  min-width: 20rem;
-  background: rgba(33, 105, 236, 0.5);
+  /* top: 2.4rem; */
+  top: 4rem;
+  /* bottom: 1rem; */
+  left: 0;
+  min-width: 18rem;
+  background: #faf5d0;
   flex: 1 1 auto;
+  z-index: 1;
 }
 .lvl-1 {
   flex: 1;
-  margin: 0 15px;
 }
-
 .lvl-2 {
-  padding: 1rem;
+  /* padding: 0rem 1rem; */
+  color: #cd2428;
 }
 .lvl-2 li {
   padding: 0.5rem;
   flex: 1 1 auto;
+  padding-left: 1rem;
+}
+.lvl-2 li:hover {
+  color: #faf5d0;
+  background-color: #cd2428;
 }
 
-/* .menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.bout {
-  padding-right: 1.5rem;
-} */
 .menulogo {
   display: flex;
   justify-content: left;
@@ -148,19 +144,22 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.lvl-0:hover::before {
+.lvl-0:hover::after {
   content: "";
   position: absolute;
   background-color: #faf5d0;
   height: 1px;
-  width: 20%;
-  bottom: 0.5rem;
-  display: block;
+  width: 100%;
+  bottom: 1.5rem;
+  /* display: block; */
 }
-
 .fleche::after {
   content: "▾";
   position: absolute;
-  font-style: normal;
+  /* font-style: normal; */
+  width: 10px;
+}
+.bout {
+  padding-right: 1.5rem;
 }
 </style>
