@@ -282,7 +282,7 @@ export default {
   flex-direction: row;
 }
 .ptimg2-restolille {
-  position: absolute;
+  position: relative;
   display: block;
   z-index: 1;
   transform: translate(-5%, 95%);

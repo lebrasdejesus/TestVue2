@@ -235,12 +235,12 @@ p {
 }
 .ptimg1 {
   opacity: 1;
-  position: absolute;
+  position: relative;
   display: block;
   transform: translate(5%, -5%);
 }
 .ptimg2 {
-  position: absolute;
+  position: relative;
   /* bottom: 10%;
   left: 20%; */
   /* margin-bottom: -38%;
