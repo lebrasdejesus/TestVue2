@@ -10,17 +10,21 @@
 
     <div class="album">
       <div class="colonne">
-        <div class="photo one">
+        <div class="photo animation one">
           <img
             src="./assets/page-nosProduits/1-Traiteur-Dood-min-scaled.jpg"
             alt="Traiteur-Dood-min-scaled"
           />
+          <div class="survol"><p>un titre au pif</p></div>
         </div>
-        <div class="photo two">
+        <div class="photo animation two">
           <img
             src="./assets/page-nosProduits/2-Eise-04-decembre-2018IMG_9542-min-scaled.jpg"
             alt="2-Eise-04-decembre-2018IMG_9542-min-scaled"
           />
+          <div class="survol">
+            <p>un titre au pif</p>
+          </div>
         </div>
         <div class="photo three">
           <img
@@ -84,12 +88,6 @@
             alt="11-Eise-04-decembre-2018IMG_9486-min-scaled"
           />
         </div>
-        <div class="photo eleven">
-          <img
-            src="./assets/page-nosProduits/9-Eise-04-decembre-2018IMG_9328-min-scaled.jpg"
-            alt="11-Eise-04-decembre-2018IMG_9486-min-scaled"
-          />
-        </div>
       </div>
     </div>
 
@@ -123,7 +121,7 @@ export default {
   display: flex;
   flex-direction: row;
   /* flex-wrap: nowrap; */
-  flex: 1;
+  /* flex: 1; */
   width: 100%;
   /* column-gap: 1em; */
   /* box-sizing: border-box; */
@@ -136,11 +134,51 @@ export default {
   width: 25%;
 }
 .photo {
-  padding: 0.5rem 0;
+  /* padding: 0.5rem 0; */
+  cursor: pointer;
+  position: relative;
+  margin: 0.5rem 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
+
 .photo img {
   width: 100%;
-  /* object-fit: fill; */
+  height: 100%;
+}
+
+.photo .survol {
+  /* padding: 0.5rem 0; */
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+/* Apparition overlay sur passage souris */
+.photo:hover .survol {
+  opacity: 1;
+}
+
+.photo .survol {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.animation {
+  animation-name: expandWidth;
+  animation-timing-function: ease;
+  animation-duration: 5s;
+}
+@keyframes expandWidth {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
 }
 /* .album {
   display: grid;

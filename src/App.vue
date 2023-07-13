@@ -21,6 +21,7 @@ import restoLille from "./restoLille.vue";
 import restoRouen from "./restoRouen.vue";
 import restoRouenHalles from "./restoRouenHalles.vue";
 import nosProduits from "./nosProduits.vue";
+import reservation from "./reservation.vue";
 import piedpage from "./components/piedpage.vue";
 
 const routes = {
@@ -30,6 +31,7 @@ const routes = {
   "/RestaurantRouen": restoRouen,
   "/RestaurantRouenHalles": restoRouenHalles,
   "/nos-produits": nosProduits,
+  "/reservations": reservation,
 };
 
 export default {
@@ -42,6 +44,7 @@ export default {
     restoRouen,
     restoRouenHalles,
     nosProduits,
+    reservation,
     piedpage,
   },
 

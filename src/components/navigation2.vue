@@ -40,7 +40,7 @@ export default {
           <a href="#/nos-produits">Nos produits</a>
         </li>
         <li class="lvl-0 bout">
-          <a href="#/">Réservations</a>
+          <a href="#/reservations">Réservations</a>
         </li>
       </ul>
     </div>
