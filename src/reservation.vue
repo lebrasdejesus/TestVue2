@@ -6,6 +6,7 @@ export default {
       date: null,
       heure: "",
       tableauHoraires: [],
+      horairechoisi: "",
     };
   },
   methods: {
@@ -42,12 +43,21 @@ export default {
         console.log(minutes);
         minutes += 30;
         newcreneau = new Date(last);
-        // newcreneau = last.setMinutes(minutes);
         newcreneau.setMinutes(minutes);
         console.log(newcreneau);
         this.tableauHoraires.push(newcreneau);
       } while (newcreneau.getHours() !== 23);
       console.log(this.tableauHoraires);
+    },
+
+    formatTime(dateTime) {
+      const hours = dateTime.getHours().toString().padStart(2, "0");
+      const minutes = dateTime.getMinutes().toString().padStart(2, "0");
+      return `${hours}:${minutes}`;
+    },
+    viewHour(horaire) {
+      this.horairechoisi = horaire;
+      //   return this.horairechoisi;
     },
   },
 };
@@ -62,9 +72,13 @@ export default {
     </div>
     <div class="englobeur-btn-horaire">
       <!-- <input type="time" v-model="heure" /> -->
-      <div class="btn-horaire" v-for="item in tableauHoraires">{{ item }}</div>
+      <div class="btn-horaire" v-for="item in tableauHoraires">
+        <span @click="viewHour(item)">{{ formatTime(item) }}</span>
+      </div>
     </div>
-    <p>l'heure de votre réservation : {{ heure }}</p>
+    <p>
+      Voulez-vous bien reserver une table le {{ date }} à {{ horairechoisi }} ?
+    </p>
   </div>
 </template>
 
@@ -78,6 +92,7 @@ export default {
 }
 .btn-horaire:hover {
   background-color: #bdb88e;
+  cursor: pointer;
 }
 .englobeur-btn-horaire {
   display: flex;
