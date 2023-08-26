@@ -10,7 +10,9 @@ export default {
 
     <div class="secondpart">
       <div class="englobeurBouton">
-        <div class="boutonblanc decalagebouton1">VOIR NOS RESTAURANTS</div>
+        <div class="boutonblanc decalagebouton1">
+          <a href="https://www.wikipedia.org/">VOIR NOS RESTAURANTS</a>
+        </div>
       </div>
       <h2>LAKSØN - Maison Scandinave</h2>
       <div class="separate"></div>
@@ -80,7 +82,9 @@ export default {
           />
           <div class="survol">
             <div class="texte-accordeon">le restaurant de Rouen</div>
-            <div class="bouton-accordeon">DÉCOUVRIR</div>
+            <div class="bouton-accordeon">
+              <a href="/restoLille.vue">DÉCOUVRIR</a>
+            </div>
           </div>
         </div>
 
@@ -92,7 +96,9 @@ export default {
           />
           <div class="survol">
             <div class="texte-accordeon">le restaurant de Lille</div>
-            <div class="bouton-accordeon">DÉCOUVRIR</div>
+            <div class="bouton-accordeon">
+              <a href="/restoRouen.vue">DÉCOUVRIR</a>
+            </div>
           </div>
         </div>
 
@@ -104,7 +110,9 @@ export default {
           />
           <div class="survol">
             <div class="texte-accordeon">Halles Agrivin (Rouen)</div>
-            <div class="bouton-accordeon">DÉCOUVRIR</div>
+            <div class="bouton-accordeon">
+              <a href="/restoRouenHalles.vue">DÉCOUVRIR</a>
+            </div>
           </div>
         </div>
       </div>
@@ -218,7 +226,7 @@ p {
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
 }
 .sousdivpetitesimages {
   position: relative;

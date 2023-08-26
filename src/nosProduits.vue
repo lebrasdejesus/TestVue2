@@ -15,7 +15,12 @@
             src="./assets/page-nosProduits/1-Traiteur-Dood-min-scaled.jpg"
             alt="Traiteur-Dood-min-scaled"
           />
-          <div class="survol"><p>un titre au pif</p></div>
+          <div class="survol">
+            <p class="titre-photo-survol">
+              Saumon fumé écossais, saumon mariné gravdlax, truite fumée, saumon
+              sauvage de la baltique fumé
+            </p>
+          </div>
         </div>
         <div class="photo animation two">
           <img
@@ -23,71 +28,107 @@
             alt="2-Eise-04-decembre-2018IMG_9542-min-scaled"
           />
           <div class="survol">
-            <p>un titre au pif</p>
+            <p>Pavé de renne de Laponie, légumes de saison</p>
           </div>
         </div>
-        <div class="photo three">
+        <div class="photo animation three">
           <img
             src="./assets/page-nosProduits/3-Eise-04-decembre-2018IMG_9330-min-scaled.jpg"
             alt="3-Eise-04-decembre-2018IMG_9330-min-scaled"
           />
+          <div class="survol">
+            <p>Tranche de saumon fumé écossais bio</p>
+          </div>
         </div>
       </div>
 
       <div class="colonne">
-        <div class="photo four">
+        <div class="photo animation four">
           <img
             src="./assets/page-nosProduits/4-Saumon-Gravlax-Dood-min-scaled.jpg"
             alt="4-Saumon-Gravlax-Dood-min-scaled"
           />
+          <div class="survol">
+            <p>Saumon gravdlax Lakson</p>
+          </div>
         </div>
-        <div class="photo five">
+        <div class="photo animation five">
           <img
             src="./assets/page-nosProduits/5-Eise-04-decembre-2018IMG_9558-min-scaled.jpg"
             alt="5-Eise-04-decembre-2018IMG_9558-min-scaled"
           />
+          <div class="survol">
+            <p>Macaron à la mangue, sorbet aux airelles</p>
+          </div>
         </div>
-        <div class="photo six">
+        <div class="photo animation six">
           <img
             src="./assets/page-nosProduits/6-Eise-04-decembre-2018IMG_9454-min-scaled.jpg"
             alt="6-Eise-04-decembre-2018IMG_9454-min-scaled"
           />
+          <div class="survol">
+            <p>Filet d'anguille fumée, cœur de saumon et maquereau fumé</p>
+          </div>
         </div>
       </div>
 
       <div class="colonne">
-        <div class="photo seven">
+        <div class="photo animation seven">
           <img
             src="./assets/page-nosProduits/7-Hareng-Dood-min-scaled.jpg"
             alt="7-Hareng-Dood-min-scaled"
           />
+          <div class="survol">
+            <p>
+              Hareng Bismark, harang mariné sauce moutarde, hareng mariné sauce
+              curry, gambas Kashmir...
+            </p>
+          </div>
         </div>
-        <div class="photo height">
+        <div class="photo animation height">
           <img
             src="./assets/page-nosProduits/8-Eise-04-decembre-2018IMG_9508-min-scaled.jpg"
             alt="8-Eise-04-decembre-2018IMG_9508-min-scaled"
           />
+          <div class="survol">
+            <p>
+              Saumon sauvage, thon fumé, crevettes Boréalis, hareng maatjes,
+              saumon gravdlax Lakson, perles de Mujol
+            </p>
+          </div>
         </div>
-        <div class="photo nine">
+        <div class="photo animation nine">
           <img
             src="./assets/page-nosProduits/9-Eise-04-decembre-2018IMG_9328-min-scaled.jpg"
             alt="9-Eise-04-decembre-2018IMG_9328-min-scaled"
           />
+          <div class="survol">
+            <p>Saumon fumé écossais tranché</p>
+          </div>
         </div>
       </div>
       <div class="colonne">
-        <div class="photo ten">
+        <div class="photo animation ten">
           <img
             src="./assets/page-nosProduits/10-Eise-04-decembre-2018IMG_9610-min-scaled.jpg"
             alt="10-Eise-04-decembre-2018IMG_9610-min-scaled"
           />
+          <div class="survol">
+            <p>
+              Maquereau fumé, thon fumé, caviar maison Prunier, blinis maison
+            </p>
+          </div>
         </div>
-        <div class="photo eleven">
+        <div class="photo animation eleven">
           <img
             src="./assets/page-nosProduits/11-Eise-04-decembre-2018IMG_9486-min-scaled.jpg"
             alt="11-Eise-04-decembre-2018IMG_9486-min-scaled"
           />
+          <div class="survol">
+            <p>Foie gras mi-cuit, chutney d'airelles, compotée de pommes</p>
+          </div>
         </div>
+        <div class="photo animation"></div>
       </div>
     </div>
 
@@ -147,7 +188,12 @@ export default {
   width: 100%;
   height: 100%;
 }
-
+.survol p {
+  font-family: "Cormorant Garamond", serif;
+  padding: 1.1rem;
+  text-align: center;
+  color: white;
+}
 .photo .survol {
   /* padding: 0.5rem 0; */
   position: absolute;
@@ -161,25 +207,52 @@ export default {
 /* Apparition overlay sur passage souris */
 .photo:hover .survol {
   opacity: 1;
+  animation-name: myAnim2;
+  animation-timing-function: ease;
+  animation-duration: 1.5s;
 }
-
 .photo .survol {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .animation {
-  animation-name: expandWidth;
+  animation-name: myAnim;
   animation-timing-function: ease;
-  animation-duration: 5s;
+  animation-duration: 1.5s;
 }
-@keyframes expandWidth {
+@keyframes myAnim {
   from {
-    height: 0;
+    opacity: 0.8;
+    transform: scale(0.2);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes myAnim2 {
+  0% {
+    opacity: 0;
+    transform: rotateX(100deg);
+    transform-origin: bottom;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: bottom;
+  }
+}
+/* @keyframes expandWidth {
+  from {
+    height: 0%;
   }
 
   to {
     height: 100%;
   }
-}
+} */
 /* .album {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
