@@ -20,6 +20,7 @@ export default {
 
 <style>
 .footer {
+  /* position: absolute; */
   background-color: #cd2428;
   border: 1px solid #faf5d0;
   height: 3.5rem;
@@ -30,6 +31,9 @@ export default {
   font-size: 1.2rem;
   font-family: "Cormorant Garamond", serif;
   font-weight: 100;
+  /* bottom: 1rem;
+  left: 1rem;
+  right: 1rem; */
 }
 .menufooter {
   display: flex;

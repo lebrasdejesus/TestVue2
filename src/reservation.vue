@@ -57,6 +57,7 @@ export default {
     },
     viewHour(horaire) {
       this.horairechoisi = horaire;
+      console.log(`horaire choisi : ${this.horairechoisi}`);
       //   return this.horairechoisi;
     },
   },
@@ -64,11 +65,21 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="maxhigh">
     <div>
-      <input type="date" v-model="date" />
-      <button @click="viewDate">voir la date choisie</button>
-      <p>la date de votre réservation : {{ date }}</p>
+      <div>
+        <p>Dans quel restaurant souhaitez vous réserver ?</p>
+        <select v-model="selected">
+          <option disabled value=""></option>
+          <option>Lille</option>
+          <option>Rouen</option>
+        </select>
+        <p>Votre restaurant : {{ selected }}</p>
+      </div>
+
+      <input type="date" v-model="date" class="btn-horaire" />
+      <div @click="viewDate" class="btn-horaire">voir la date choisie</div>
+      <!-- <p>la date de votre réservation : {{ date }}</p> -->
     </div>
     <div class="englobeur-btn-horaire">
       <!-- <input type="time" v-model="heure" /> -->
@@ -91,12 +102,17 @@ export default {
   margin: 0.5rem;
 }
 .btn-horaire:hover {
-  background-color: #bdb88e;
+  background-color: #d3ce9d;
   cursor: pointer;
 }
 .englobeur-btn-horaire {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+.maxhigh {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
 }
 </style>

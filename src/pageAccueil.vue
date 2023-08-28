@@ -5,20 +5,22 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="border-box">
     <div class="fjord"></div>
 
     <div class="secondpart">
       <div class="englobeurBouton">
         <div class="boutonblanc decalagebouton1">
-          <a href="https://www.wikipedia.org/">VOIR NOS RESTAURANTS</a>
+          <a href="#fourthpart">VOIR NOS RESTAURANTS</a>
         </div>
       </div>
       <h2>LAKSØN - Maison Scandinave</h2>
       <div class="separate"></div>
       <p>Spécialités Nordiques et de poissons frais depuis 1987</p>
       <div class="englobeurBouton">
-        <div class="boutonrouge">RÉSERVER UNE TABLE</div>
+        <div class="boutonrouge">
+          <a href="/#/reservations">RÉSERVER UNE TABLE</a>
+        </div>
       </div>
     </div>
 
@@ -65,7 +67,7 @@ export default {
       </div>
     </div>
 
-    <div class="fourthpart">
+    <div class="fourthpart" id="fourthpart">
       <div>
         <h2>Nos restaurants</h2>
         <br />
@@ -121,6 +123,10 @@ export default {
 </template>
 
 <style>
+.border-box {
+  box-sizing: border-box;
+  position: relative;
+}
 .fjord {
   width: 100%;
   height: 100vh;

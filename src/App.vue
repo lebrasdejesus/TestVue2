@@ -93,10 +93,13 @@ body {
 .cadre {
   border: 1rem solid #cd2428;
   /* width: 100vw; */
-  height: 100%;
+  min-height: 100vh;
   box-sizing: border-box;
   background-color: #cd2428;
 }
+/* .global {
+  min-height: 100vh;
+} */
 </style>
 
 
