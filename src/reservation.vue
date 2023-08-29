@@ -56,7 +56,7 @@ export default {
       return `${hours}:${minutes}`;
     },
     viewHour(horaire) {
-      this.horairechoisi = horaire;
+      this.horairechoisi = this.formatTime(horaire);
       console.log(`horaire choisi : ${this.horairechoisi}`);
       //   return this.horairechoisi;
     },
@@ -65,7 +65,7 @@ export default {
 </script>
 
 <template>
-  <div class="maxhigh">
+  <div>
     <div>
       <div>
         <p>Dans quel restaurant souhaitez vous réserver ?</p>
@@ -78,7 +78,7 @@ export default {
       </div>
 
       <input type="date" v-model="date" class="btn-horaire" />
-      <div @click="viewDate" class="btn-horaire">voir la date choisie</div>
+      <div @click="viewDate" class="btn-horaire">Choisir un horaire</div>
       <!-- <p>la date de votre réservation : {{ date }}</p> -->
     </div>
     <div class="englobeur-btn-horaire">
@@ -87,9 +87,12 @@ export default {
         <span @click="viewHour(item)">{{ formatTime(item) }}</span>
       </div>
     </div>
-    <p>
-      Voulez-vous bien reserver une table le {{ date }} à {{ horairechoisi }} ?
-    </p>
+    <div class="marge-inf">
+      <p>
+        Voulez-vous bien reserver une table le {{ date }} à
+        {{ horairechoisi }} ?
+      </p>
+    </div>
   </div>
 </template>
 
@@ -109,10 +112,5 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-.maxhigh {
-  position: relative;
-  height: 100%;
-  box-sizing: border-box;
 }
 </style>

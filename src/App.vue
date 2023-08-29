@@ -7,7 +7,9 @@
       <component :is="currentView" />
       <!-- <pageAccueil />
       <restoLille /> -->
-      <piedpage />
+      <div class="foot">
+        <piedpage />
+      </div>
     </div>
   </div>
 </template>
@@ -75,9 +77,11 @@ export default {
   font-family: "Cormorant Garamond", serif;
 }
 
-/* .global{
+.global {
+  /* position: relative; */
   box-sizing: border-box;
-} */
+  /* padding-bottom: 3.5rem; */
+}
 body {
   /* background-color: rgb(164, 164, 164); */
   margin: 0;
@@ -96,10 +100,19 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   background-color: #cd2428;
+  position: relative;
+  padding-bottom: 3.5rem;
 }
 /* .global {
   min-height: 100vh;
 } */
+.foot {
+  position: absolute;
+  bottom: 0rem;
+  left: 0rem;
+  right: 0rem;
+  margin-top: 1rem;
+}
 </style>
 
 
