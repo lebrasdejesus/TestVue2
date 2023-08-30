@@ -66,28 +66,33 @@ export default {
 
 <template>
   <div>
-    <div>
+    <div class="margin-top">
+      <p>Dans quel restaurant souhaitez vous réserver ?</p>
+    </div>
+    <!-- <div>
+      <select v-model="selected">
+        <option disabled value=""></option>
+        <option>Lille</option>
+        <option>Rouen</option>
+      </select>
+      <p>Votre restaurant : {{ selected }}</p>
+    </div> -->
+    <div class="choix-resto">
+      <div id="choix-lille"><p>Lille</p></div>
+      <div id="choix-rouen"><p>Rouen</p></div>
+    </div>
+    <div class="resa">
       <div>
-        <p>Dans quel restaurant souhaitez vous réserver ?</p>
-        <select v-model="selected">
-          <option disabled value=""></option>
-          <option>Lille</option>
-          <option>Rouen</option>
-        </select>
-        <p>Votre restaurant : {{ selected }}</p>
+        <input type="date" v-model="date" class="btn-horaire" />
+        <div @click="viewDate" class="btn-horaire">Choisir un horaire</div>
+        <!-- <p>la date de votre réservation : {{ date }}</p> -->
       </div>
-
-      <input type="date" v-model="date" class="btn-horaire" />
-      <div @click="viewDate" class="btn-horaire">Choisir un horaire</div>
-      <!-- <p>la date de votre réservation : {{ date }}</p> -->
-    </div>
-    <div class="englobeur-btn-horaire">
-      <!-- <input type="time" v-model="heure" /> -->
-      <div class="btn-horaire" v-for="item in tableauHoraires">
-        <span @click="viewHour(item)">{{ formatTime(item) }}</span>
+      <div class="englobeur-btn-horaire">
+        <!-- <input type="time" v-model="heure" /> -->
+        <div class="btn-horaire" v-for="item in tableauHoraires">
+          <span @click="viewHour(item)">{{ formatTime(item) }}</span>
+        </div>
       </div>
-    </div>
-    <div class="marge-inf">
       <p>
         Voulez-vous bien reserver une table le {{ date }} à
         {{ horairechoisi }} ?
@@ -97,6 +102,39 @@ export default {
 </template>
 
 <style>
+.margin-top {
+  margin-top: 2rem;
+}
+.choix-resto {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 1rem;
+}
+.choix-resto div {
+  border-top: #faf5d0 1px solid;
+  border-left: #faf5d0 1px solid;
+  padding: 1rem;
+}
+#choix-rouen {
+  border-right: #faf5d0 1px solid;
+  border-bottom: #24cd3d 1px solid;
+}
+#choix-lille {
+  border-bottom: #246dcd 1px solid;
+}
+#choix-rouen:active {
+  border-bottom: #cd2428 1px solid;
+}
+.resa {
+  border: #faf5d0 1px solid;
+  padding: 1rem;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  margin: -1px 0 0 0;
+}
 .btn-horaire {
   background-color: #faf5d0;
   width: fit-content;

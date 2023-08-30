@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <div class="border-box">
+  <div>
     <div class="fjord"></div>
 
     <div class="secondpart">
@@ -123,10 +123,6 @@ export default {
 </template>
 
 <style>
-.border-box {
-  box-sizing: border-box;
-  position: relative;
-}
 .fjord {
   width: 100%;
   height: 100vh;
