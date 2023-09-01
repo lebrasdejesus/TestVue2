@@ -10,11 +10,11 @@ export default {
 
     <!-- SECOND PART -->
     <div class="secondpart">
-      <div class="englobeurBouton">
-        <div class="boutonblanc decalagebouton1">
-          RÉSERVER UNE TABLE À ROUEN
+      <a href="/#/reservations">
+        <div class="englobeurBouton">
+          <div class="boutonblanc decalagebouton1">RÉSERVER UNE TABLE</div>
         </div>
-      </div>
+      </a>
       <h2>LAKSØN - Maison Scandinave à Rouen</h2>
       <div class="separate"></div>
       <p>Spécialités Nordiques et de poissons frais depuis 1987</p>
@@ -89,7 +89,9 @@ export default {
           cocktail dinatoire.
         </p>
         <br />
-        <div class="boutonblanc coutourrouge">RÉSERVER UNE TABLE</div>
+        <a href="/#/reservations">
+          <div class="boutonblanc coutourrouge">RÉSERVER UNE TABLE</div>
+        </a>
       </div>
     </div>
 
@@ -140,7 +142,9 @@ export default {
         </div>
       </div>
       <div class="englobeurBouton">
-        <div class="boutonblanc contourrouge">VOIR LA GALERIE</div>
+        <a href="/#/nos-produits">
+          <div class="boutonrouge">VOIR LA GALERIE</div>
+        </a>
       </div>
     </div>
   </div>

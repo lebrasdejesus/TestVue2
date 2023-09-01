@@ -9,18 +9,18 @@ export default {
     <div class="fjord"></div>
 
     <div class="secondpart">
-      <div class="englobeurBouton">
-        <div class="boutonblanc decalagebouton1">
-          <a href="#fourthpart">VOIR NOS RESTAURANTS</a>
+      <a href="#fourthpart">
+        <div class="englobeurBouton">
+          <div class="boutonblanc decalagebouton1">VOIR NOS RESTAURANTS</div>
         </div>
-      </div>
+      </a>
       <h2>LAKSØN - Maison Scandinave</h2>
       <div class="separate"></div>
       <p>Spécialités Nordiques et de poissons frais depuis 1987</p>
       <div class="englobeurBouton">
-        <div class="boutonrouge">
-          <a href="/#/reservations">RÉSERVER UNE TABLE</a>
-        </div>
+        <a href="/#/reservations">
+          <div class="boutonrouge">RÉSERVER UNE TABLE</div>
+        </a>
       </div>
     </div>
 
@@ -63,7 +63,12 @@ export default {
         </p>
         <br /><br />
         <p class="bold">Bon voyage en terre inconnue !</p>
-        <div class="boutonblanc contourrouge">RÉSERVER UNE TABLE</div>
+        <a href="/#/reservations">
+          <div class="boutonblanc contourrouge">
+            RÉSERVER UNE TABLE
+            <!-- <a href="/#/reservations">RÉSERVER UNE TABLE</a> -->
+          </div>
+        </a>
       </div>
     </div>
 
@@ -84,9 +89,9 @@ export default {
           />
           <div class="survol">
             <div class="texte-accordeon">le restaurant de Rouen</div>
-            <div class="bouton-accordeon">
-              <a href="/restoLille.vue">DÉCOUVRIR</a>
-            </div>
+            <a href="/#/RestaurantRouen">
+              <div class="bouton-accordeon">DÉCOUVRIR</div>
+            </a>
           </div>
         </div>
 
@@ -98,9 +103,9 @@ export default {
           />
           <div class="survol">
             <div class="texte-accordeon">le restaurant de Lille</div>
-            <div class="bouton-accordeon">
-              <a href="/restoRouen.vue">DÉCOUVRIR</a>
-            </div>
+            <a href="/#/RestaurantLille">
+              <div class="bouton-accordeon">DÉCOUVRIR</div>
+            </a>
           </div>
         </div>
 
@@ -112,9 +117,9 @@ export default {
           />
           <div class="survol">
             <div class="texte-accordeon">Halles Agrivin (Rouen)</div>
-            <div class="bouton-accordeon">
-              <a href="/restoRouenHalles.vue">DÉCOUVRIR</a>
-            </div>
+            <a href="/#/RestaurantRouenHalles">
+              <div class="bouton-accordeon">DÉCOUVRIR</div>
+            </a>
           </div>
         </div>
       </div>

@@ -91,7 +91,9 @@ body {
 .nav {
   /* position: sticky;
    top: 0; */
+  position: relative;
   margin-bottom: 1rem;
+  z-index: 2;
 }
 
 .cadre {

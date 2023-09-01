@@ -7,6 +7,12 @@ export default {
       heure: "",
       tableauHoraires: [],
       horairechoisi: "",
+      // divElementLille: document.getElementById("choix-lilleON"),
+      // divElementRouen: document.getElementById("choix-rouenON"),
+      borderColor1: "#cd2428",
+      borderColor2: "#faf5d0",
+      VilleChoisie: "",
+      showDiv: false,
     };
   },
   methods: {
@@ -60,28 +66,68 @@ export default {
       console.log(`horaire choisi : ${this.horairechoisi}`);
       //   return this.horairechoisi;
     },
+    changeBorderColorLille() {
+      const preciseColor1 = "#cd2428";
+      const preciseColor2 = "#faf5d0";
+      this.VilleChoisie = "Lille";
+      // Mettre à jour la couleur de la bordure en utilisant la classe
+      //const divElement = document.querySelector('.color-changing-div');
+      this.borderColor1 = preciseColor1;
+      this.borderColor2 = preciseColor2;
+      return this.VilleChoisie;
+    },
+    changeBorderColorRouen() {
+      const preciseColor1 = "#faf5d0";
+      const preciseColor2 = "#cd2428";
+      this.VilleChoisie = "Rouen";
+      // Mettre à jour la couleur de la bordure en utilisant la classe
+      //const divElement = document.querySelector('.color-changing-div');
+      this.borderColor1 = preciseColor1;
+      this.borderColor2 = preciseColor2;
+      return this.VilleChoisie;
+    },
+    toggleDiv() {
+      console.log(this.showDiv);
+      this.showDiv = true; // Inverse l'état d'affichage
+      console.log(this.showDiv);
+    },
   },
 };
 </script>
 
 <template>
   <div>
-    <div class="margin-top">
+    <div class="margin-top-5 centrer">
       <p>Dans quel restaurant souhaitez vous réserver ?</p>
     </div>
-    <!-- <div>
-      <select v-model="selected">
-        <option disabled value=""></option>
-        <option>Lille</option>
-        <option>Rouen</option>
-      </select>
-      <p>Votre restaurant : {{ selected }}</p>
-    </div> -->
     <div class="choix-resto">
-      <div id="choix-lille"><p>Lille</p></div>
-      <div id="choix-rouen"><p>Rouen</p></div>
+      <div
+        id="choix-lilleON"
+        :style="{ borderBottomColor: borderColor1 }"
+        v-on:click="changeBorderColorLille"
+      >
+        <p>Lille</p>
+      </div>
+      <div
+        id="choix-rouenON"
+        :style="{ borderBottomColor: borderColor2 }"
+        v-on:click="changeBorderColorRouen"
+      >
+        <p>Rouen</p>
+      </div>
     </div>
     <div class="resa">
+      <div>
+        <select class="btn-horaire" v-model="selected">
+          <!-- <option disabled value=""></option> -->
+          <option>1 couvert</option>
+          <option>2 couverts</option>
+          <option>3 couverts</option>
+          <option>4 couverts</option>
+          <option>5 couverts</option>
+          <option>6 couverts</option>
+        </select>
+      </div>
       <div>
         <input type="date" v-model="date" class="btn-horaire" />
         <div @click="viewDate" class="btn-horaire">Choisir un horaire</div>
@@ -93,17 +139,25 @@ export default {
           <span @click="viewHour(item)">{{ formatTime(item) }}</span>
         </div>
       </div>
-      <p>
-        Voulez-vous bien reserver une table le {{ date }} à
-        {{ horairechoisi }} ?
-      </p>
+      <div class="btn-horaire" @click="toggleDiv">Valider</div>
+      <div class="resultat-resa centrer margin-top-1" v-if="showDiv">
+        <p>Nombre de couverts : {{ selected }}</p>
+        <p>
+          Vous venez bien de reserver une table à
+          {{ this.VilleChoisie }} le {{ date }} à {{ horairechoisi }}.
+        </p>
+      </div>
+      <div v-else></div>
     </div>
   </div>
 </template>
 
 <style>
-.margin-top {
-  margin-top: 2rem;
+.margin-top-5 {
+  margin-top: 5rem;
+}
+.margin-top-1 {
+  margin-top: 1rem;
 }
 .choix-resto {
   display: flex;
@@ -112,22 +166,32 @@ export default {
   z-index: 1;
   margin-top: 1rem;
 }
-.choix-resto div {
+#choix-lilleON {
   border-top: #faf5d0 1px solid;
   border-left: #faf5d0 1px solid;
+  border-bottom: #faf5d0 1px solid;
   padding: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
 }
-#choix-rouen {
+
+#choix-rouenON {
+  border-top: #faf5d0 1px solid;
+  border-left: #faf5d0 1px solid;
   border-right: #faf5d0 1px solid;
-  border-bottom: #24cd3d 1px solid;
+  border-bottom: #faf5d0 1px solid;
+  padding: 1rem;
+  cursor: pointer;
 }
-#choix-lille {
-  border-bottom: #246dcd 1px solid;
-}
-#choix-rouen:active {
+
+/* #choix-rouen:active {
   border-bottom: #cd2428 1px solid;
-}
+} */
 .resa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: #faf5d0 1px solid;
   padding: 1rem;
   position: absolute;
@@ -151,4 +215,10 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
 }
+.centrer {
+  text-align: center;
+}
+/* .resultat-resa {
+  display: none;
+} */
 </style>

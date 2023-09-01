@@ -9,29 +9,27 @@ export default {
     <div class="fjord2"></div>
 
     <div class="secondpart">
-      <div class="englobeurBouton">
-        <div class="boutonblanc decalagebouton1">
-          RÉSERVER UNE TABLE À LILLE
+      <a href="/#/reservations">
+        <div class="englobeurBouton">
+          <div class="boutonblanc decalagebouton1">RÉSERVER UNE TABLE</div>
         </div>
-      </div>
+      </a>
       <h2>LAKSØN - Maison Scandinave à Lille</h2>
       <div class="separate"></div>
       <p>Spécialités Nordiques et de poissons frais depuis 1987</p>
       <div class="englobeurBouton">
-        <div class="boutonrouge-restolille">
-          <a
-            href="https://lakson.fr/wp-content/uploads/2023/02/Carte-Lakson-Lille-site-0223.pdf"
-            target="_blank"
-            >VOIR LA CARTE DU RESTAURANT</a
-          >
-        </div>
-        <div class="boutonrouge-restolille">
-          <a
-            href="https://lakson.fr/wp-content/uploads/2022/12/Catalogue-Lakson-Lille-Decembre-2022.pdf"
-            target="_blank"
-            >VOIR LE CATALOGUE TRAITEUR</a
-          >
-        </div>
+        <a
+          href="https://lakson.fr/wp-content/uploads/2023/02/Carte-Lakson-Lille-site-0223.pdf"
+          target="_blank"
+        >
+          <div class="boutonrouge-restolille">VOIR LA CARTE DU RESTAURANT</div>
+        </a>
+        <a
+          href="https://lakson.fr/wp-content/uploads/2022/12/Catalogue-Lakson-Lille-Decembre-2022.pdf"
+          target="_blank"
+        >
+          <div class="boutonrouge-restolille">VOIR LE CATALOGUE TRAITEUR</div>
+        </a>
       </div>
       <p class="paragraphe-centre">21 Rue du Curé Saint-Etienne, 59800 Lille</p>
 
@@ -104,7 +102,9 @@ export default {
           cocktail dinatoire.
         </p>
         <br />
-        <div class="boutonblanc coutourrouge">RÉSERVER UNE TABLE</div>
+        <a href="/#/reservations">
+          <div class="boutonblanc coutourrouge">RÉSERVER UNE TABLE</div>
+        </a>
       </div>
     </div>
 
@@ -142,13 +142,12 @@ export default {
           Emportez chez vous un peu de Scandinavie !
         </p>
         <br />
-        <div class="boutonrouge">
-          <a
-            href="https://app.dood.com/fr/lille/epicerie-fine/lakson"
-            target="_blank"
-            >VOIR LA BOUTIQUE TRAITEUR</a
-          >
-        </div>
+        <a
+          href="https://app.dood.com/fr/lille/epicerie-fine/lakson"
+          target="_blank"
+        >
+          <div class="boutonrouge">VOIR LA BOUTIQUE TRAITEUR</div>
+        </a>
       </div>
     </div>
 
@@ -198,7 +197,9 @@ export default {
         </div>
       </div>
       <div class="englobeurBouton">
-        <div class="boutonblanc contourrouge">VOIR LA GALERIE</div>
+        <a href="/#/nos-produits">
+          <div class="boutonblanc contourrouge">VOIR LA GALERIE</div>
+        </a>
       </div>
     </div>
   </div>

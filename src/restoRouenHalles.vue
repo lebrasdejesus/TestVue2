@@ -15,13 +15,12 @@ export default {
       <p>Spécialités Nordiques et de poissons frais depuis 1987</p>
 
       <div class="englobeurBouton">
-        <div class="boutonrouge-restolille">
-          <a
-            href="https://lakson.fr/wp-content/uploads/2023/02/Carte-Lakson-Lille-site-0223.pdf"
-            target="_blank"
-            >VOIR LE CATALOGUE TRAITEUR</a
-          >
-        </div>
+        <a
+          href="https://lakson.fr/wp-content/uploads/2023/02/Carte-Lakson-Lille-site-0223.pdf"
+          target="_blank"
+        >
+          <div class="boutonrouge-restolille">VOIR LE CATALOGUE TRAITEUR</div>
+        </a>
       </div>
 
       <p class="paragraphe-centre">1 Bd Ferdinand de Lesseps, 76000 Rouen</p>
@@ -77,7 +76,9 @@ export default {
           spécialités scandinaves qui raviront votre palais.
         </p>
         <br />
-        <div class="boutonblanc coutourrouge">RÉSERVER UNE TABLE</div>
+        <a href="/#/reservations">
+          <div class="boutonblanc coutourrouge">RÉSERVER UNE TABLE</div>
+        </a>
       </div>
     </div>
   </div>
