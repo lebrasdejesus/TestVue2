@@ -25,6 +25,7 @@ import restoRouenHalles from "./restoRouenHalles.vue";
 import nosProduits from "./nosProduits.vue";
 import reservation from "./reservation.vue";
 import piedpage from "./components/piedpage.vue";
+// import ImageModal from "./components/ImageModal.vue";
 
 const routes = {
   "/": pageAccueil,
@@ -48,6 +49,8 @@ export default {
     nosProduits,
     reservation,
     piedpage,
+    // ImageModal,
+    // "image-modal": ImageModal,
   },
 
   data() {

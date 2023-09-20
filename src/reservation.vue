@@ -135,6 +135,7 @@ export default {
       </div>
       <div class="englobeur-btn-horaire">
         <!-- <input type="time" v-model="heure" /> -->
+        <!-- <div class="btn-horaire" v-bind:key="item in tableauHoraires"> -->
         <div class="btn-horaire" v-for="item in tableauHoraires">
           <span @click="viewHour(item)">{{ formatTime(item) }}</span>
         </div>

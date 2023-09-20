@@ -10,18 +10,21 @@
 
     <div class="album">
       <div class="colonne">
+        <!-- <a href="./components/nosProduitsImage1"> -->
         <div class="photo animation one">
+          <!-- <image-modal :image-source="imageSource"></image-modal> -->
           <img
             src="./assets/page-nosProduits/1-Traiteur-Dood-min-scaled.jpg"
             alt="Traiteur-Dood-min-scaled"
           />
           <div class="survol">
-            <p class="titre-photo-survol">
+            <p>
               Saumon fumé écossais, saumon mariné gravdlax, truite fumée, saumon
               sauvage de la baltique fumé
             </p>
           </div>
         </div>
+        <!-- </a> -->
         <div class="photo animation two">
           <img
             src="./assets/page-nosProduits/2-Eise-04-decembre-2018IMG_9542-min-scaled.jpg"
@@ -140,8 +143,29 @@
 </template>
 
 <script>
+// import NosProduitsImage1 from "./components/nosProduitsImage1.vue";
+import ImageModal from "./components/ImageModal.vue";
 export default {
   name: "nos-produits",
+  components: {
+    // "image-modal": NosProduitsImage1,
+    "image-modal": ImageModal,
+  },
+  data() {
+    return {
+      imageSource:
+        "/src/assets/page-nosProduits/1-Traiteur-Dood-min-scaled.jpg",
+      // imageSource: "../assets/page-nosProduits/1-Traiteur-Dood-min-scaled.jpg",
+    };
+  },
+  // methods: {
+  //   showImageModal() {
+  //     this.showModal = true;
+  //   },
+  //   closeImageModal() {
+  //     this.showModal = false;
+  //   },
+  // },
 };
 </script>
 
@@ -183,7 +207,6 @@ export default {
   justify-content: center;
   align-items: center;
 }
-
 .photo img {
   width: 100%;
   height: 100%;
@@ -202,17 +225,13 @@ export default {
   width: 100%;
   opacity: 0;
   transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-
-/* Apparition overlay sur passage souris */
 .photo:hover .survol {
   opacity: 1;
   animation-name: myAnim2;
   animation-timing-function: ease;
   animation-duration: 1.5s;
-}
-.photo .survol {
-  background-color: rgba(0, 0, 0, 0.5);
 }
 .animation {
   animation-name: myAnim;
